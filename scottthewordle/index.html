@@ -8,10 +8,16 @@
             let guesses = 0;
             let guesstext = "Scott The Wordle\n";
             let win = false;
-            const words = ["words", "scott", "terry", "jerry", "wendy", "stash", "snips", "essig", "erics", "bathe", "lotts", "wario", "ouyas", "smash", "trial", "mario", "sonic", "party", "bongo", "ebola", "fling", "geist", "pepto", "video", "leaks", "leaky", "title", "kohls"];
+            const words = ["words", "scott", "terry", "jerry", "wendy", "stash", "snips", "essig", "erics", "bathe", "lotts", "wario", "ouyas", "smash", "trial", "mario", "sonic", "party", "bongo", "fling", "geist", "pepto", "leaks", "leaky", "kohls"];
             let wordnum = Math.floor(Math.random() * words.length);
             let rightword = words[wordnum];
             function didthethingwiththeinput() {
+                if (document.getElementById("guess").value.toLowerCase() == "my back hurts")
+                {
+                    document.getElementById("backhurtsound").play();
+                    document.getElementById("backhurtsound").currentTime = 0;
+                    return;
+                }
                 if (guesses < 6 && !win)
                 {
                     if (words.includes(document.getElementById("guess").value.toLowerCase()))
@@ -154,7 +160,7 @@
                     });
             }
             function notifybub(notiftext) {
-                document.getElementById("notifpopupbubble").innerHTML = ("<div id='notify'><p id='notifyin'></p></div>");
+                document.getElementById("notifpopupbubble").innerHTML = ("<div id='notify'><center><p id='notifyin'></p></center></div>");
                 document.getElementById("notifyin").innerHTML = notiftext;
                 setTimeout(function() {document.getElementById("notify").remove();}, 2000);
             }
@@ -321,5 +327,6 @@
             </div>
         </center>
         <div id="notifpopupbubble"></div>
+        <audio id="backhurtsound" src="./mybackhurts.mp3"></audio>
     </body>
 </html>
