@@ -8,7 +8,7 @@
             let guesses = 0;
             let guesstext = "Scott The Wordle\n";
             let win = false;
-            const words = ["words", "scott", "terry", "jerry", "wendy", "stash", "snips", "essig", "erics", "bathe", "lotts", "wario", "ouyas", "smash", "trial", "mario", "sonic", "party", "bongo", "fling", "geist", "pepto", "leaks", "leaky", "kohls", "vince", "farve", "swiss"];
+            const words = ["words", "scott", "terry", "jerry", "wendy", "stash", "snips", "essig", "erics", "bathe", "lotts", "wario", "ouyas", "smash", "trial", "mario", "sonic", "party", "bongo", "fling", "geist", "pepto", "leaks", "leaky", "kohls", "vince", "farve", "swiss", "shaft"];
             let wordnum = Math.floor(Math.random() * words.length);
             let rightword = words[wordnum];
             function didthethingwiththeinput() {
@@ -20,7 +20,7 @@
                 }
                 if (document.getElementById("guess").value.toLowerCase() == "our house")
                 {
-                    notifybub("OUR house?")
+                    notifybub("OUR house?");
                     return;
                 }
                 if (guesses < 6 && !win)
@@ -132,6 +132,9 @@
                             document.getElementById("getclipboard").hidden = false;
                             document.getElementById("submitguess").remove();
                             document.getElementById("guess").remove();
+                            document.getElementById("wordlistbutton").remove();
+                            document.getElementById("wordlistspacer").remove();
+                            document.getElementById("wordlistbr").remove();
                             guesstext += "Correct word: ";
                             guesstext += rightword;
                         }
@@ -142,6 +145,9 @@
                             document.getElementById("getclipboard").hidden = false;
                             document.getElementById("submitguess").remove();
                             document.getElementById("guess").remove();
+                            document.getElementById("wordlistbutton").remove();
+                            document.getElementById("wordlistspacer").remove();
+                            document.getElementById("wordlistbr").remove();
                         }
                         guesses += 1;
                     }
@@ -168,6 +174,23 @@
                 document.getElementById("notifpopupbubble").innerHTML = ("<div id='notify'><center><p id='notifyin'></p></center></div>");
                 document.getElementById("notifyin").innerHTML = notiftext;
                 setTimeout(function() {document.getElementById("notify").remove();}, 2000);
+            }
+            function openwordlist() {
+                if (document.getElementById("wordlistbubbleinner") != null)
+                {
+                    document.getElementById("wordlistbubbleinner").remove()
+                }
+                else {
+                    document.getElementById("wordlistbubble").innerHTML = ("<div id='wordlistbubbleinner'><center><div class='wordlistbubbleinnerlocksize'><button id='closewordsbut' onclick='openwordlist()' top='10px' left='10px'>Close</button><br><p id='wordlistbubbleinnertext' max-width='325px'>Scott The Words: </p></div></center></div>");
+                    for (i in words)
+                    {
+                        document.getElementById("wordlistbubbleinnertext").innerHTML += words[i];
+                        if (i != words.length-1)
+                        {
+                            document.getElementById("wordlistbubbleinnertext").innerHTML += ", ";
+                        }
+                    }
+                }
             }
         </script>
         <style>
@@ -212,7 +235,7 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
             .spacer { width: 10px; height:50px; }
-            .spacesmall { width: 10px; height:5px; }
+            .spacesmall { width: 10px; height:3px; }
             .title {
                 color: rgb(96,128,255)
             }
@@ -227,6 +250,21 @@
                 align-items: center;
                 width: 250px;
                 transform: translate(-50%, -50%);
+            }
+            #wordlistbubbleinner {
+                border: 3px solid rgb(128, 128, 128);
+                background-color: rgb(182, 182, 182);
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 350px;
+                transform: translate(-50%, -50%);
+            }
+            .wordlistbubbleinnerlocksize {
+                width: 325px;
             }
         </style>
     </head>
@@ -243,6 +281,10 @@
             </div>
             <button id="getclipboard" hidden onclick="copyclipboard()">Copy results to clipboard</button>
             <br>
+            <button id="wordlistbutton" onclick="openwordlist()">Word list</button>
+            <br>
+            <div class="spacesmall" id="wordlistspacer"></div>
+            <br id="wordlistbr">
             <input id="guess" type="text" size="20" title="The word you would like to guess">
             <button id="submitguess" title="Guess the word you typed into the input field" onclick="didthethingwiththeinput()">Guess</button>
             <br>
@@ -330,11 +372,12 @@
                     <div class="boxoflet" id="guessed5r4"><p class="guessedletterp" id="guessed5r4p"></p></div>
                 </div>
             </div>
-            <div class="spacer"></div>
-            <div class="spacer"></div>
+            <div height="25px"></div>
+            <br>
             <small>NOT AFFILIATED WITH BLUE BORDER ENTERTAINMENT NOR SCOTT THE WOZ</small>
         </center>
         <div id="notifpopupbubble"></div>
+        <div id="wordlistbubble"></div>
         <audio id="backhurtsound" src="./mybackhurts.mp3"></audio>
     </body>
 </html>
