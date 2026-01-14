@@ -18,6 +18,11 @@
                     document.getElementById("backhurtsound").currentTime = 0;
                     return;
                 }
+                if (document.getElementById("guess").value.toLowerCase() == "our house")
+                {
+                    notifybub("OUR house?")
+                    return;
+                }
                 if (guesses < 6 && !win)
                 {
                     if (words.includes(document.getElementById("guess").value.toLowerCase()))
@@ -329,4 +334,5 @@
         <div id="notifpopupbubble"></div>
         <audio id="backhurtsound" src="./mybackhurts.mp3"></audio>
     </body>
+
 </html>
