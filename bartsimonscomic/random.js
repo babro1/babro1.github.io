@@ -1,14 +1,10 @@
 const links = [
-    "./harold",
-    "./haroldsequel",
-    "./argument",
-    "./playship"
+    "./season1/harold",
+    "./season1/haroldsequel",
+    "./season1/argument",
+    "./season1/playship"
 ];
 function randlink() {
     const ra = Math.floor(Math.random() * links.length);
     return links[ra];
 }
-document.getElementById('radd').addEventListener('click', function() {
-    const randomLink = randlink();
-    window.location.href = randomLink+".html"; // Redirect to the random link
-});
