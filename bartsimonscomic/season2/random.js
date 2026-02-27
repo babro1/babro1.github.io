@@ -1,6 +1,7 @@
 const links = [
     "./thomas",
-    "./cooking"
+    "./cooking",
+    "./sailing"
 ];
 function randlinks2() {
     const ra = Math.floor(Math.random() * links.length);
