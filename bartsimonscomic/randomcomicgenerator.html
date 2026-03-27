@@ -30,6 +30,10 @@
     <script src="season1/random.js"></script>
     <script src="season2/random.js"></script>
     <script>
+      links.forEach((image) => {
+        img = new Image();
+        img.src = image;
+      }); //preload
       function slopup() {
         document.getElementById("topleft").src = randlink()+".png";
         document.getElementById("topright").src = randlink()+".png";
