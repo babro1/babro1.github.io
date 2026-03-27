@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #topleft {
+        position: absolute;
+        clip: rect(0, 125px, 0, 125px);
+      }
+      #topright {
+        position: absolute;
+        clip: rect(125px, 0, 0, 125px);
+      }
+      #btmleft {
+        position: absolute;
+        clip: rect(0, 125px, 125px, 0);
+      }
+      #btmright {
+        position: absolute;
+        clip: rect(125px, 0, 125px, 0);
+      }
+      .comic {
+        width: 250;
+        height: 250;
+      }
+    </style>
+    <script src="random.js"></script>
+    <script>
+      function slopup() {
+        document.getElementById("topleft").src = randlink()+".png"
+        document.getElementById("topright").src = randlink()+".png"
+        document.getElementById("btmleft").src = randlink()+".png"
+        document.getElementById("btmright").src = randlink()+".png"
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>bart simons comic</h1>
+      <h2>random comic generator</h2>
+      <a href="./">main page</a>
+      <hr>
+      <button onclick="slopup();">generate new comic</button>
+      <div class="comic">
+        <img id="topleft">
+        <img id="topright">
+        <img id="btmleft">
+        <img id="btmright">
+      </div>
+    </center>
+  </body>
+</html>
