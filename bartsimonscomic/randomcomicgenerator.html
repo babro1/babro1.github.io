@@ -27,6 +27,8 @@
       }
     </style>
     <script src="random.js"></script>
+    <script src="season1/random.js"></script>
+    <script src="season2/random.js"></script>
     <script>
       function slopup() {
         document.getElementById("topleft").src = randlink()+".png";
@@ -35,16 +37,16 @@
         document.getElementById("btmright").src = randlink()+".png";
       }
       function slopup1() {
-        document.getElementById("topleft").src = grandlink1()+".png";
-        document.getElementById("topright").src = grandlink1()+".png";
-        document.getElementById("btmleft").src = grandlink1()+".png";
-        document.getElementById("btmright").src = grandlink1()+".png";
+        document.getElementById("topleft").src = "season1/"+grandlink1()+".png";
+        document.getElementById("topright").src = "season1/"+grandlink1()+".png";
+        document.getElementById("btmleft").src = "season1/"+grandlink1()+".png";
+        document.getElementById("btmright").src = "season1/"+grandlink1()+".png";
       }
       function slopup2() {
-        document.getElementById("topleft").src = grandlink2()+".png";
-        document.getElementById("topright").src = grandlink2()+".png";
-        document.getElementById("btmleft").src = grandlink2()+".png";
-        document.getElementById("btmright").src = grandlink2()+".png";
+        document.getElementById("topleft").src = "season2/"+grandlink2()+".png";
+        document.getElementById("topright").src = "season2/"+grandlink2()+".png";
+        document.getElementById("btmleft").src = "season2/"+grandlink2()+".png";
+        document.getElementById("btmright").src = "season2/"+grandlink2()+".png";
       }
     </script>
   </head>
