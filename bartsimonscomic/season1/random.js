@@ -5,6 +5,6 @@ const randlinks1 = [
     "./playship"
 ];
 function grandlinks1() {
-    const ra = Math.floor(Math.random() * links.length);
-    return links[ra];
+    const ra = Math.floor(Math.random() * randlinks1.length);
+    return randlinks1[ra];
 }
