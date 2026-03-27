@@ -1,10 +1,10 @@
-const links = [
+const randlinks1 = [
     "./harold",
     "./haroldsequel",
     "./argument",
     "./playship"
 ];
-function randlinks1() {
+function grandlinks1() {
     const ra = Math.floor(Math.random() * links.length);
     return links[ra];
 }
