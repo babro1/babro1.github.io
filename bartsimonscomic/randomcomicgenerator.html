@@ -34,6 +34,18 @@
         document.getElementById("btmleft").src = randlink()+".png";
         document.getElementById("btmright").src = randlink()+".png";
       }
+      function slopup1() {
+        document.getElementById("topleft").src = grandlink1()+".png";
+        document.getElementById("topright").src = grandlink1()+".png";
+        document.getElementById("btmleft").src = grandlink1()+".png";
+        document.getElementById("btmright").src = grandlink1()+".png";
+      }
+      function slopup2() {
+        document.getElementById("topleft").src = grandlink2()+".png";
+        document.getElementById("topright").src = grandlink2()+".png";
+        document.getElementById("btmleft").src = grandlink2()+".png";
+        document.getElementById("btmright").src = grandlink2()+".png";
+      }
     </script>
   </head>
   <body>
@@ -43,6 +55,8 @@
       <a href="./">main page</a>
       <hr>
       <button onclick="slopup();">generate new comic</button>
+      <button onclick="slopup1();">generate new season 1 comic</button>
+      <button onclick="slopup2();">generate new season 2 comic</button>
       <div class="comic">
         <img id="topleft">
         <img id="topright">
