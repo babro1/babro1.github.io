@@ -33,10 +33,12 @@
     <script src="season1/random.js"></script>
     <script src="season2/random.js"></script>
     <script>
-      links.forEach((image) => {
-        img = new Image();
-        img.src = image;
-      }); //preload
+      function preloadslides() {
+        links.forEach((image) => {
+          img = new Image();
+          img.src = image;
+        });
+      }
       function slopup() {
         document.getElementById("topleft").src = randlink()+".png";
         document.getElementById("topright").src = randlink()+".png";
@@ -57,7 +59,7 @@
       }
     </script>
   </head>
-  <body>
+  <body onload="preloadslides();">
     <center>
       <h1>bart simons comic</h1>
       <h2>random comic generator</h2>
