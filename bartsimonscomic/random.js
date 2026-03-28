@@ -7,7 +7,8 @@ const links = [
     "./season2/cooking",
     "./season2/sailing",
     "./season2/vacation",
-    "./season2/trapped"
+    "./season2/trapped",
+    "./season2/changes"
 ];
 function randlink() {
     const ra = Math.floor(Math.random() * links.length);
