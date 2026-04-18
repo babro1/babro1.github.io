@@ -33,11 +33,15 @@
       .spacing {
         height: 20px;
       }
+      .au {
+          transform: scaleX(-1);
+      }
     </style>
     <script src="random.js"></script>
     <script src="season1/random.js"></script>
     <script src="season2/random.js"></script>
     <script>
+      let au = 0;
       function preloadslides() {
         links.forEach((image) => {
           img = new Image();
@@ -49,6 +53,13 @@
         document.getElementById("topright").src = randlink()+".png";
         document.getElementById("btmleft").src = randlink()+".png";
         document.getElementById("btmright").src = randlink()+".png";
+        if (au)
+        {
+          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "";
+        }
       }
       function slopup1() {
         document.getElementById("topleft").src = "season1/"+grandlinks1()+".png";
