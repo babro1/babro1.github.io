@@ -4,7 +4,10 @@ const randlinks2 = [
     "./sailing",
     "./vacation",
     "./trapped",
-    "./pizza"
+    "./pizza",
+    "./clone",
+    "./au",
+    "./story"
 ];
 function grandlinks2() {
     const ra = Math.floor(Math.random() * randlinks2.length);
