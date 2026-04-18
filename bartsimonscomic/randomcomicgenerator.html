@@ -85,10 +85,25 @@
         document.getElementById("btmright").src = "season1/"+grandlinks1()+".png";
         if (au)
         {
-          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "");
+          document.getElementById("topleft").classList = "au";
+          document.getElementById("topright").classList = "au";
+          document.getElementById("btmleft").classList = "au";
+          document.getElementById("btmright").classList = "au";
+          if (Math.random() > 0.5)
+            document.getElementById("topleft").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("topright").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("btmleft").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("btmright").classList = "";
+        }
+        else
+        {
+          document.getElementById("topleft").classList = "";
+          document.getElementById("topright").classList = "";
+          document.getElementById("btmleft").classList = "";
+          document.getElementById("btmright").classList = "";
         }
       }
       function slopup2() {
@@ -99,10 +114,25 @@
         document.getElementById("btmright").src = "season2/"+grandlinks2()+".png";
         if (au)
         {
-          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "");
+          document.getElementById("topleft").classList = "au";
+          document.getElementById("topright").classList = "au";
+          document.getElementById("btmleft").classList = "au";
+          document.getElementById("btmright").classList = "au";
+          if (Math.random() > 0.5)
+            document.getElementById("topleft").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("topright").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("btmleft").classList = "";
+          if (Math.random() > 0.5)
+            document.getElementById("btmright").classList = "";
+        }
+        else
+        {
+          document.getElementById("topleft").classList = "";
+          document.getElementById("topright").classList = "";
+          document.getElementById("btmleft").classList = "";
+          document.getElementById("btmright").classList = "";
         }
       }
     </script>
