@@ -56,10 +56,21 @@
         document.getElementById("btmright").src = randlink()+".png";
         if (au)
         {
-          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "");
-          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "");
+          if (Math.random() > 0.5)
+            document.getElementById("topleft").classList.toggle("au");
+          if (Math.random() > 0.5)
+            document.getElementById("topright").classList.toggle("au");
+          if (Math.random() > 0.5)
+            document.getElementById("btmleft").classList.toggle("au");
+          if (Math.random() > 0.5)
+            document.getElementById("btmright").classList.toggle("au");
+        }
+        else
+        {
+          document.getElementById("topleft").classList.remove("au");
+          document.getElementById("topright").classList.remove("au");
+          document.getElementById("btmleft").classList.remove("au");
+          document.getElementById("btmright").classList.remove("au");
         }
       }
       function slopup1() {
