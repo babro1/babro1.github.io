@@ -49,6 +49,7 @@
         });
       }
       function slopup() {
+        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = randlink()+".png";
         document.getElementById("topright").src = randlink()+".png";
         document.getElementById("btmleft").src = randlink()+".png";
@@ -62,16 +63,32 @@
         }
       }
       function slopup1() {
+        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = "season1/"+grandlinks1()+".png";
         document.getElementById("topright").src = "season1/"+grandlinks1()+".png";
         document.getElementById("btmleft").src = "season1/"+grandlinks1()+".png";
         document.getElementById("btmright").src = "season1/"+grandlinks1()+".png";
+        if (au)
+        {
+          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "";
+        }
       }
       function slopup2() {
+        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = "season2/"+grandlinks2()+".png";
         document.getElementById("topright").src = "season2/"+grandlinks2()+".png";
         document.getElementById("btmleft").src = "season2/"+grandlinks2()+".png";
         document.getElementById("btmright").src = "season2/"+grandlinks2()+".png";
+        if (au)
+        {
+          document.getElementById("topleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("topright").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmleft").class = (Math.round(Math.random()) ? "au" : "";
+          document.getElementById("btmright").class = (Math.round(Math.random()) ? "au" : "";
+        }
       }
     </script>
   </head>
@@ -81,6 +98,7 @@
       <h2>random comic generator</h2>
       <p><a href="./">main page</a> - <a href="./randomcomicgenerator.html">comic generator</a> - <a href="./season1">season 1</a> - <a href="./season2">season 2</a></p>
       <hr>
+      <label><button type="checkbox" id="aulabel">alternate universes allowed</label>
       <button onclick="slopup();">generate new comic</button>
       <button onclick="slopup1();">generate new season 1 comic</button>
       <button onclick="slopup2();">generate new season 2 comic</button>
