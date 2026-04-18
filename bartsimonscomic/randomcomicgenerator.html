@@ -33,16 +33,11 @@
       .spacing {
         height: 20px;
       }
-      .au {
-        offset-anchor: center;
-        transform: scaleX(-1);
-      }
     </style>
     <script src="random.js"></script>
     <script src="season1/random.js"></script>
     <script src="season2/random.js"></script>
     <script>
-      let au = 0;
       function preloadslides() {
         links.forEach((image) => {
           img = new Image();
@@ -50,91 +45,22 @@
         });
       }
       function slopup() {
-        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = randlink()+".png";
         document.getElementById("topright").src = randlink()+".png";
         document.getElementById("btmleft").src = randlink()+".png";
         document.getElementById("btmright").src = randlink()+".png";
-        if (au)
-        {
-          document.getElementById("topleft").classList = "au";
-          document.getElementById("topright").classList = "au";
-          document.getElementById("btmleft").classList = "au";
-          document.getElementById("btmright").classList = "au";
-          if (Math.random() > 0.5)
-            document.getElementById("topleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("topright").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmright").classList = "";
-        }
-        else
-        {
-          document.getElementById("topleft").classList = "";
-          document.getElementById("topright").classList = "";
-          document.getElementById("btmleft").classList = "";
-          document.getElementById("btmright").classList = "";
-        }
       }
       function slopup1() {
-        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = "season1/"+grandlinks1()+".png";
         document.getElementById("topright").src = "season1/"+grandlinks1()+".png";
         document.getElementById("btmleft").src = "season1/"+grandlinks1()+".png";
         document.getElementById("btmright").src = "season1/"+grandlinks1()+".png";
-        if (au)
-        {
-          document.getElementById("topleft").classList = "au";
-          document.getElementById("topright").classList = "au";
-          document.getElementById("btmleft").classList = "au";
-          document.getElementById("btmright").classList = "au";
-          if (Math.random() > 0.5)
-            document.getElementById("topleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("topright").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmright").classList = "";
-        }
-        else
-        {
-          document.getElementById("topleft").classList = "";
-          document.getElementById("topright").classList = "";
-          document.getElementById("btmleft").classList = "";
-          document.getElementById("btmright").classList = "";
-        }
       }
       function slopup2() {
-        au = document.getElementById("aulabel").value;
         document.getElementById("topleft").src = "season2/"+grandlinks2()+".png";
         document.getElementById("topright").src = "season2/"+grandlinks2()+".png";
         document.getElementById("btmleft").src = "season2/"+grandlinks2()+".png";
         document.getElementById("btmright").src = "season2/"+grandlinks2()+".png";
-        if (au)
-        {
-          document.getElementById("topleft").classList = "au";
-          document.getElementById("topright").classList = "au";
-          document.getElementById("btmleft").classList = "au";
-          document.getElementById("btmright").classList = "au";
-          if (Math.random() > 0.5)
-            document.getElementById("topleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("topright").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmleft").classList = "";
-          if (Math.random() > 0.5)
-            document.getElementById("btmright").classList = "";
-        }
-        else
-        {
-          document.getElementById("topleft").classList = "";
-          document.getElementById("topright").classList = "";
-          document.getElementById("btmleft").classList = "";
-          document.getElementById("btmright").classList = "";
-        }
       }
     </script>
   </head>
@@ -144,7 +70,6 @@
       <h2>random comic generator</h2>
       <p><a href="./">main page</a> - <a href="./randomcomicgenerator.html">comic generator</a> - <a href="./season1">season 1</a> - <a href="./season2">season 2</a></p>
       <hr>
-      <label><input type="checkbox" id="aulabel">alternate universes allowed</label>
       <button onclick="slopup();">generate new comic</button>
       <button onclick="slopup1();">generate new season 1 comic</button>
       <button onclick="slopup2();">generate new season 2 comic</button>
