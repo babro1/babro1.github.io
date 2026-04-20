@@ -37,6 +37,7 @@
     <script src="random.js"></script>
     <script src="season1/random.js"></script>
     <script src="season2/random.js"></script>
+    <script src="season3/random.js"></script>
     <script>
       function preloadslides() {
         links.forEach((image) => {
@@ -62,6 +63,12 @@
         document.getElementById("btmleft").src = "season2/"+grandlinks2()+".png";
         document.getElementById("btmright").src = "season2/"+grandlinks2()+".png";
       }
+      function slopup3() {
+        document.getElementById("topleft").src = "season2/"+grandlinks3()+".png";
+        document.getElementById("topright").src = "season2/"+grandlinks3()+".png";
+        document.getElementById("btmleft").src = "season2/"+grandlinks3()+".png";
+        document.getElementById("btmright").src = "season2/"+grandlinks3()+".png";
+      }
     </script>
   </head>
   <body onload="preloadslides();">
@@ -73,6 +80,7 @@
       <button onclick="slopup();">generate new comic</button>
       <button onclick="slopup1();">generate new season 1 comic</button>
       <button onclick="slopup2();">generate new season 2 comic</button>
+      <button onclick="slopup3();">generate new season 3 comic</button>
       <br>
       <div class="spacing"></div>
       <br>
