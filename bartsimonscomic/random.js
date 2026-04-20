@@ -12,7 +12,8 @@ const links = [
     "./season2/pizza",
     "./season2/clone",
     "./season2/au",
-    "./season2/story"
+    "./season2/story",
+    "./season3/roundit"
 ];
 function randlink() {
     const ra = Math.floor(Math.random() * links.length);
