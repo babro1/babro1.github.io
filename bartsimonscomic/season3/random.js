@@ -1,5 +1,6 @@
 const randlinks3 = [
-    "./roundit"
+    "./roundit",
+    "./family"
 ];
 function grandlinks3() {
     const ra = Math.floor(Math.random() * randlinks3.length);
