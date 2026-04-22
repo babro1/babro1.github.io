@@ -5,10 +5,19 @@
   <title>Babro's Flash Page</title>
   <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
     supports it.</noscript>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.ruffle().load("barioflashhomepage.swf");
+    });
 </head>
 <body>
   <div id='ruffle' class="gameloc"></div>
-  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-  <script id = "gabe">swfobject.embedSWF("https://babro1.github.io/flash/babroflashhomepage.swf", 'ruffle', 800, 600);</script> <!-- Theses files should be local -->
+</script>
 </body>
 </html>
