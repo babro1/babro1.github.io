@@ -11,6 +11,10 @@
     window.addEventListener("load", (event) => {
         const ruffle = window.RufflePlayer.newest();
         const player = ruffle.createPlayer();
+        player.ruffle().config = {
+            autoplay: "auto",
+            openUrlMode: "allow"
+        };
         const container = document.getElementById("container");
         container.appendChild(player);
         player.ruffle().load("babroflashhomepage.swf");
