@@ -48,10 +48,11 @@
         });
       }
       function slopup() {
-        document.getElementById("topleft").src = randlink()+".png";
-        document.getElementById("topright").src = randlink()+".png";
-        document.getElementById("btmleft").src = randlink()+".png";
-        document.getElementById("btmright").src = randlink()+".png";
+        let rn = randlink();
+        document.getElementById("topleft").src = rn+".png";
+        document.getElementById("topright").src = rn+".png";
+        document.getElementById("btmleft").src = rn+".png";
+        document.getElementById("btmright").src = rn+".png";
       }
       function slopup1() {
         document.getElementById("topleft").src = "season1/"+grandlinks1()+".png";
